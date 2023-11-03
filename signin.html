@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: serif;
+        }
+        .background-image {
+            background-image: url('https://wallpapers.com/images/featured/grey-5xvepms9fbbi0bmh.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 50vh;
+            transform: translate(-50%, -50%);
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            width: 80%;
+            padding: 10px;
+        }
+        #start-quiz-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            width: 50%;
+        }
+		#start-quiz-button:hover {
+    background-color: #0056b3 /* Darker green color on hover */
+}
+        h1 {
+            text-shadow: 2px 1px #ffffff;
+        }
+        .instructions-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .instructions-container p {
+            color: #000000; /* Dark Blue color for the text */
+            text-align: left; /* Left-align the instructions */
+        }
+    </style>
+    <title>Quiz Quest</title>
+</head>
+<body>
+    <div class="background-image">
+        <div class="login-container">
+            <div class="instructions-container">
+                <h1>Read Instructions</h1>
+                <p><center><b>Please read all the instructions carefully and proceed with the quiz:</b></center></p>
+                <p>1. The medium of questions will be only English.</p>
+                <p>2. First round is based upon General science in which 10 questions will be displayed, carrying 20 marks.</p>
+                <p>3. Second round will be based upon General knowledge in which 5 questions will be displayed, carrying 10 marks.</p>
+                <p>4. Third round will be logo identification in which 5 logos will be displayed, carrying 20 marks.</p>
+                <p><b><center>Don't panic and give your best. All the best.</center></b></p>
+                <center>
+                    <button type="button" id="start-quiz-button" onclick="startQuiz()">Start Quiz</button>
+                </center>
+            </div>
+        </div>
+    </div>
+    <script>
+        function startQuiz() {
+            window.location.href = 'section1.html'; 
+        }
+    </script>
+</body>
+</html>

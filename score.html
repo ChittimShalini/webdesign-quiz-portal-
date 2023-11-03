@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: serif;
+        }
+        .background-image {
+            background-image: url('https://wallpapers.com/images/featured/grey-5xvepms9fbbi0bmh.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 30vh;
+            transform: translate(-50%, -50%);
+        }
+        input, button {
+            display: block;
+            margin: 10px 0;
+            width: 80%;
+            padding: 10px;
+        }
+        h1 {
+            text-shadow: 2px 1px #ffffff;
+        }
+		.quit-button {
+            margin-top: 20px;
+            text-align: center; 
+            background-color: #007bff; 
+            color: #fff; 
+            padding: 10px 20px; 
+            width: 65px;
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        .quit-button:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+    <title>Final Score</title>
+</head>
+<body>
+    <div class="background-image">
+        <div class="login-container">
+		    <center>
+            <h1>Section-wise Scores</h1>
+            <p>Your section 1 score is <span id="section1Score">16/20</span></p>
+            <p>Your section 2 score is <span id="section2Score">6/10</span></p>
+            <p>Your section 3 score is <span id="section3Score">20/20</span></p>
+            <h2>Your Final Score is <span id="finalScore">42/50</span></h2>
+			</center><br>
+            <center><button class="quit-button" id="quit-button">Quit</button></center>
+        </div>
+    </div>
+    <script>
+        // JavaScript to update scores
+        document.getElementById("section1Score").textContent = "16/20";
+        document.getElementById("section2Score").textContent = "6/10";
+        document.getElementById("section3Score").textContent = "20/20";
+        document.getElementById("finalScore").textContent = "42/50";
+        document.getElementById("quit-button").addEventListener("click", function() {
+        window.location.href = "index.html";
+    });
+</script>
+    </script>
+</body>
+</html>

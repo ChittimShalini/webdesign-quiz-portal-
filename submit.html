@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: serif;
+        }
+        .background-image {
+            background-image: url('https://wallpapers.com/images/featured/grey-5xvepms9fbbi0bmh.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center;
+        }
+        .image-container {
+            background-image: url('https://public.bnbstatic.com/image/pgc/202307/ea691e6b2301f83c3a0e99fd593639ac.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 300px; 
+        }
+        .score-button {
+            margin-top: 20px; 
+            background-color: #007BFF; 
+            color: #fff; 
+            padding: 10px 20px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        .score-button:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+    <title>Quiz Quest</title>
+</head>
+<body>
+    <div class="background-image">
+        <div class="login-container">
+            <div class="image-container"></div>
+            <button class="score-button" id="view-score-button">View Score</button>
+        </div>
+    </div>
+	<script>
+    document.getElementById("view-score-button").addEventListener("click", function() {
+        
+        window.location.href = "score.html";
+    });
+</script>
+</body>
+</html>
+

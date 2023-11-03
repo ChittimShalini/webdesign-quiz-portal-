@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: serif;
+        }
+        .background-image {
+            background-image: url('https://wallpapers.com/images/featured/grey-5xvepms9fbbi0bmh.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            position: relative;
+        }
+        .transparent-header {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 300px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        input, button {
+		    margin:10px;
+            display: block;
+            margin: 10px 0;
+            width: 80%;
+			padding: 10px;
+        }
+        #signin-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px ;
+            cursor: pointer;
+            border: none;
+			width: 50%;
+        }
+		#signin-button:hover {
+    background-color: #0056b3 /* Darker green color on hover */
+}
+		h1{
+		text-shadow: 2px 1px #ffffff;
+		}
+    </style>
+    <title>Quizizz</title>
+</head>
+<body>
+    <div class="background-image">
+        <header class="transparent-header">
+            <h1>Quiz Quest</h1>
+        </header>
+        <div class="login-container">
+            <form id="login-form">
+			    <label for="reg-number"><b>Registration Number:<b></label>
+                <input type="text" id="reg-number" name="reg-number">
+                <label for="email"><b>Email:<b></label>
+                <input type="email" id="email" name="email" >
+                <label for="password"><b>Password:<b></label>
+                <input type="password" id="password" name="password" >
+				<center>
+           <button type="button" id="signin-button">Sign In</button></center>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const signInButton = document.getElementById('signin-button');
+            signInButton.addEventListener('click', function () {
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const regNumber = document.getElementById('reg-number').value;  
+				   
+                if (email.endsWith('@vitstudent.ac.in')) {
+                    // Redirect to another HTML page
+                    window.location.href = 'signin.html';
+                } else {
+                    alert('Only emails ending with @vitstudent.ac.in are allowed.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
